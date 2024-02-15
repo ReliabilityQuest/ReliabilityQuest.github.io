@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tufte-Jekyll</title>
-    <description>Adding some Tufte into my life</description>
+    <description>A Jekyll theme for content-rich sites</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 15 Feb 2024 10:02:35 -0500</pubDate>
-    <lastBuildDate>Thu, 15 Feb 2024 10:02:35 -0500</lastBuildDate>
+    <pubDate>Thu, 15 Feb 2024 10:22:16 -0500</pubDate>
+    <lastBuildDate>Thu, 15 Feb 2024 10:22:16 -0500</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
     
       <item>
