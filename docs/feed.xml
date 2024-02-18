@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tufte-Jekyll</title>
-    <description>Adding some Tufte into my life</description>
+    <title>Reliability Quest</title>
+    <description>The quest for less unplanned downtime.</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 17 Feb 2024 13:29:31 -0500</pubDate>
-    <lastBuildDate>Sat, 17 Feb 2024 13:29:31 -0500</lastBuildDate>
+    <pubDate>Sat, 17 Feb 2024 21:16:28 -0500</pubDate>
+    <lastBuildDate>Sat, 17 Feb 2024 21:16:28 -0500</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
     
       <item>
