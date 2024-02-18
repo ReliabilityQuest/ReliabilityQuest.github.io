@@ -1,9 +1,9 @@
 baseurl: 
-title: Tufte-Jekyll
-subtitle: Content-centric blogging
+title: Reliability Quest
+subtitle: Intentional improvement
 author: Reliability Quest
 simple_search: http://google.com/search
-description: Adding some Tufte into my life
+description: The quest for less unplanned downtime.
 name: tufte
 markdown: kramdown
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"

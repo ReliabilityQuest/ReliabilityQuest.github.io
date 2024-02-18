@@ -3,12 +3,18 @@ layout: full-width
 title: About
 ---
 
-Is this working? The *Tufte-Jekyll* theme is a natural extension of the work done by [Edward Tufte](https://github.com/edwardtufte/tufte-css) and his collaborators on Github who created a CSS file that allows web writers to use the same simple and elegant style employed in his published materials.
+Why quest for reliability? Do you want to perform and produce when you can? I do.
 
-To incorporate these styles into a Jekyll theme, I have made some very slight modifications that attempt to maintain the feel of the CSS styles in his Github repo.
+By definition reliability is the time you’re not in unplanned downtime divided by the total time. 
 
-Note that this is a full-width layout. This was accomplished by including ```layout: full-width``` in the YAML front matter for this page. Keep in mind that all the Tufte-Jekyll sidenote and marginnote goodness will not work on full-width layouts! 
+Thinking broadly, there are a few principles that come out when seeking high reliability:
+- you want to minimize surprise
+- It’s okay to plan time off
+- When you take time off, you want to take care of what is needed. 
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll).
+Implicit in the above is a desire to not take *too much* time off. 
 
+What’s measured gets managed. First, it’s useful to track reliability. Whether it’s part of a larger effort like Overall Equipment Effectiveness or not matter less than understanding where you are. 
+
+Once you know where you are, you can plan where you want to go. 
 
