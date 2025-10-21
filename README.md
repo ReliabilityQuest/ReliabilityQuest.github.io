@@ -203,3 +203,47 @@ This is `baseurl:` with nothing after it. Not even a space.
 I have added a boilerplate Rakefile directly from the [jekyll-rake-boilerplate repo](https://github.com/gummesson/jekyll-rake-boilerplate). This saves you a small amount of time by prepending the date on a post name and populated the bare minimum of YAML front matter in the file. Please visit the link to the repo to find out how it runs. One thing to note is that there should be *no* space between the task and the opening bracket of your file name. ```rake post["Title"]``` will work while ```rake post ["Title"]``` will not.
 
 There is another rakefile (UploadtoGithub.Rakefile) included that only has one task in it - an automated upload to a *Github Pages* location of the site. This is necessary because of the plugins used by this theme. It does scary stuff like move your ```_site``` somewhere safe, delete everything, move the ```_site``` back and then do a commit to the ```gh-pages``` branch of your repository. You can read about it [here](http://blog.nitrous.io/2013/08/30/using-jekyll-plugins-on-github-pages.html). You would only need to use this if you are using Github project pages to host your site. Integration with the existing Rakefile is left as an exercise for the reader.
+
+## Reliability Quest Customizations
+
+This site has been customized for the Reliability Quest blog at reliability.quest.
+
+### GitHub Pages Setup
+
+This site uses GitHub Pages with a custom domain (reliability.quest) and deploys from the `/docs` folder on the `Master` branch.
+
+**Important:** The site uses custom Jekyll plugins, which means GitHub Pages cannot build the site automatically. Instead, we build locally and commit the generated files in the `docs/` folder.
+
+#### Custom Domain Configuration
+
+The custom domain is configured via a `CNAME` file. This file must exist in both:
+1. The root directory: `/CNAME` (source file)
+2. The docs directory: `/docs/CNAME` (generated during build)
+
+**Critical:** When running `jekyll build`, the CNAME file is automatically copied from the root to the docs folder. If the CNAME file is missing from docs, GitHub Pages will break and the custom domain will stop working.
+
+#### Build and Deploy Process
+
+1. Make changes to your content in `_posts/`, `_includes/`, etc.
+2. Build the site: `bundle exec jekyll build`
+3. Verify CNAME exists: `cat docs/CNAME` (should contain `reliability.quest`)
+4. Commit all changes including the `docs/` folder
+5. Push to GitHub: `git push origin Master`
+
+GitHub Pages will then serve the pre-built site from the `docs/` folder.
+
+#### Troubleshooting
+
+If the site breaks after a rebuild:
+- Check if `docs/CNAME` exists and contains `reliability.quest`
+- If missing, ensure `CNAME` exists in the root directory
+- Run `bundle exec jekyll build` to regenerate docs folder
+- Commit and push the updated docs folder
+
+### Custom Logo
+
+The site uses a custom "R" badge logo instead of the original Tufte-Jekyll "TJ" badge. The logo files are:
+- `assets/img/badge_1.png` - Main logo displayed in header
+- `assets/img/badge.png` - Backup/alternate logo
+
+The logo was created using ImageMagick with a circular design, dark red "R" in Liberation Serif Bold font, and cream background matching the site's Tufte-inspired color scheme.
