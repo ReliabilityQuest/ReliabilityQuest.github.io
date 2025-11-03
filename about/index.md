@@ -3,9 +3,7 @@ layout: full-width
 title: About
 ---
 
-Why quest for reliability? Do you want to perform and produce when you can? I do.
-
-By definition reliability is the time you’re not in unplanned downtime divided by the total time. 
+By definition, reliability is the time you’re not in unplanned downtime divided by the total time. 
 
 Thinking broadly, there are a few principles that come out when seeking high reliability:
 - you want to minimize surprise
