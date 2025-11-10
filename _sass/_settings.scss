@@ -7,10 +7,14 @@ $body-font: ETBembo, "Chronicle Text G2", Palatino, "Palatino Linotype", "Palati
 $sans-font: "Gill Sans", "Gill Sans MT", "Gotham Narrow", "Lato", Calibri, sans-serif;
 $code-font: Consolas, "Liberation Mono", Menlo, Courier, monospace;
 $url-font: "Lucida Console", "Lucida Sans Typewriter", Monaco, "Bitstream Vera Sans Mono", monospace;
-$text-color: #111;
-$bg-color: #fffff8;
-$contrast-color: #a00000;
-$border-color: #333333;
+
+// Dark mode color scheme - elegant and easy on the eyes
+$text-color: #e8e6e3;          // warm off-white for comfortable reading
+$bg-color: #1a1a1a;            // soft black, easier on eyes than pure black
+$contrast-color: #007aff;      // iA Writer inspired blue for accents
+$border-color: #444444;        // subtle gray for borders
+$code-bg-color: #252525;       // slightly lighter than background for code blocks
+
 $link-style: underline; // choices are 'color' or 'underline'. Color option styles links with $contrast-color set above
 
 

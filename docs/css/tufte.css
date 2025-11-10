@@ -36,31 +36,33 @@
 }
 /* This file contains all the constants for colors and font styles */
 /**
- * Syntax highlighting styles
+ * Syntax highlighting styles - Dark mode optimized
  */
 .highlight {
   margin-bottom: 15px;
 }
 
 .highlight {
-  background: #fffff8;
+  background: #252525;
 }
 .highlight .c {
-  color: #998;
+  color: #8b8b8b;
   font-style: italic;
 }
 .highlight .err {
-  color: #a61717;
-  background-color: #e3d2d2;
+  color: #ff6b6b;
+  background-color: #3a2222;
 }
 .highlight .k {
+  color: #ff79c6;
   font-weight: bold;
 }
 .highlight .o {
+  color: #ff6b6b;
   font-weight: bold;
 }
 .highlight .cm {
-  color: #998;
+  color: #8b8b8b;
   font-style: italic;
 }
 .highlight .cp {
@@ -68,7 +70,7 @@
   font-weight: bold;
 }
 .highlight .c1 {
-  color: #998;
+  color: #8b8b8b;
   font-style: italic;
 }
 .highlight .cs {
@@ -77,35 +79,35 @@
   font-style: italic;
 }
 .highlight .gd {
-  color: #000;
-  background-color: #fdd;
+  color: #ff6b6b;
+  background-color: #3a2222;
 }
 .highlight .gd .x {
-  color: #000;
-  background-color: #faa;
+  color: #ff6b6b;
+  background-color: #3a2222;
 }
 .highlight .ge {
   font-style: italic;
 }
 .highlight .gr {
-  color: #a00;
+  color: #ff6b6b;
 }
 .highlight .gh {
   color: #999;
 }
 .highlight .gi {
-  color: #000;
-  background-color: #dfd;
+  color: #50fa7b;
+  background-color: #1e3a1e;
 }
 .highlight .gi .x {
-  color: #000;
-  background-color: #afa;
+  color: #50fa7b;
+  background-color: #1e3a1e;
 }
 .highlight .go {
   color: #888;
 }
 .highlight .gp {
-  color: #555;
+  color: #aaa;
 }
 .highlight .gs {
   font-weight: bold;
@@ -114,128 +116,133 @@
   color: #aaa;
 }
 .highlight .gt {
-  color: #a00;
+  color: #ff6b6b;
 }
 .highlight .kc {
+  color: #bd93f9;
   font-weight: bold;
 }
 .highlight .kd {
+  color: #ff79c6;
   font-weight: bold;
 }
 .highlight .kp {
+  color: #ff79c6;
   font-weight: bold;
 }
 .highlight .kr {
+  color: #ff79c6;
   font-weight: bold;
 }
 .highlight .kt {
-  color: #458;
+  color: #8be9fd;
   font-weight: bold;
 }
 .highlight .m {
-  color: #099;
+  color: #bd93f9;
 }
 .highlight .s {
-  color: #d14;
+  color: #f1fa8c;
 }
 .highlight .na {
-  color: #008080;
+  color: #50fa7b;
 }
 .highlight .nb {
-  color: #0086B3;
+  color: #8be9fd;
 }
 .highlight .nc {
-  color: #458;
+  color: #8be9fd;
   font-weight: bold;
 }
 .highlight .no {
-  color: #008080;
+  color: #50fa7b;
 }
 .highlight .ni {
-  color: #800080;
+  color: #bd93f9;
 }
 .highlight .ne {
-  color: #900;
+  color: #ff6b6b;
   font-weight: bold;
 }
 .highlight .nf {
-  color: #900;
+  color: #50fa7b;
   font-weight: bold;
 }
 .highlight .nn {
-  color: #555;
+  color: #aaa;
 }
 .highlight .nt {
-  color: #000080;
+  color: #ff79c6;
 }
 .highlight .nv {
-  color: #008080;
+  color: #50fa7b;
 }
 .highlight .ow {
+  color: #ff79c6;
   font-weight: bold;
 }
 .highlight .w {
-  color: #bbb;
+  color: #666;
 }
 .highlight .mf {
-  color: #099;
+  color: #bd93f9;
 }
 .highlight .mh {
-  color: #099;
+  color: #bd93f9;
 }
 .highlight .mi {
-  color: #099;
+  color: #bd93f9;
 }
 .highlight .mo {
-  color: #099;
+  color: #bd93f9;
 }
 .highlight .sb {
-  color: #d14;
+  color: #f1fa8c;
 }
 .highlight .sc {
-  color: #d14;
+  color: #f1fa8c;
 }
 .highlight .sd {
-  color: #d14;
+  color: #f1fa8c;
 }
 .highlight .s2 {
-  color: #d14;
+  color: #f1fa8c;
 }
 .highlight .se {
-  color: #d14;
+  color: #f1fa8c;
 }
 .highlight .sh {
-  color: #d14;
+  color: #f1fa8c;
 }
 .highlight .si {
-  color: #d14;
+  color: #f1fa8c;
 }
 .highlight .sx {
-  color: #d14;
+  color: #f1fa8c;
 }
 .highlight .sr {
-  color: #009926;
+  color: #50fa7b;
 }
 .highlight .s1 {
-  color: #d14;
+  color: #f1fa8c;
 }
 .highlight .ss {
-  color: #990073;
+  color: #bd93f9;
 }
 .highlight .bp {
   color: #999;
 }
 .highlight .vc {
-  color: #008080;
+  color: #50fa7b;
 }
 .highlight .vg {
-  color: #008080;
+  color: #50fa7b;
 }
 .highlight .vi {
-  color: #008080;
+  color: #50fa7b;
 }
 .highlight .il {
-  color: #099;
+  color: #bd93f9;
 }
 
 * {
@@ -296,20 +303,20 @@ html {
 }
 
 a {
-  color: #a00000;
+  color: #007aff;
   text-decoration: none;
 }
 
 p > a, cite > a, span > a {
-  color: #111;
+  color: #e8e6e3;
   text-decoration: none;
-  background: -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(currentColor, currentColor);
-  background: linear-gradient(#fffff8, #fffff8), linear-gradient(#fffff8, #fffff8), linear-gradient(currentColor, currentColor);
+  background: -webkit-linear-gradient(#1a1a1a, #1a1a1a), -webkit-linear-gradient(#1a1a1a, #1a1a1a), -webkit-linear-gradient(currentColor, currentColor);
+  background: linear-gradient(#1a1a1a, #1a1a1a), linear-gradient(#1a1a1a, #1a1a1a), linear-gradient(currentColor, currentColor);
   -webkit-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
   -moz-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
   background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
   background-repeat: no-repeat, no-repeat, repeat-x;
-  text-shadow: 0.03em 0 #fffff8, -0.03em 0 #fffff8, 0 0.03em #fffff8, 0 -0.03em #fffff8, 0.06em 0 #fffff8, -0.06em 0 #fffff8, 0.09em 0 #fffff8, -0.09em 0 #fffff8, 0.12em 0 #fffff8, -0.12em 0 #fffff8, 0.15em 0 #fffff8, -0.15em 0 #fffff8;
+  text-shadow: 0.03em 0 #1a1a1a, -0.03em 0 #1a1a1a, 0 0.03em #1a1a1a, 0 -0.03em #1a1a1a, 0.06em 0 #1a1a1a, -0.06em 0 #1a1a1a, 0.09em 0 #1a1a1a, -0.09em 0 #1a1a1a, 0.12em 0 #1a1a1a, -0.12em 0 #1a1a1a, 0.15em 0 #1a1a1a, -0.15em 0 #1a1a1a;
   background-position: 0% 93%, 100% 93%, 0% 93%;
 }
 
@@ -319,8 +326,8 @@ body {
   margin-right: auto;
   padding-left: 12.5%;
   font-family: ETBembo, "Chronicle Text G2", Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
-  background-color: #fffff8;
-  color: #111;
+  background-color: #1a1a1a;
+  color: #e8e6e3;
   max-width: 1400px;
   counter-reset: sidenote-counter;
 }
@@ -437,12 +444,12 @@ h1 code, h2 code, h3 code {
 table, table.booktabs {
   width: auto;
   border-spacing: 0px;
-  border-top: 2px solid #333333;
-  border-bottom: 2px solid #333333;
+  border-top: 2px solid #444444;
+  border-bottom: 2px solid #444444;
 }
 
 .booktabs th, th {
-  border-bottom: 1px solid #333333;
+  border-bottom: 1px solid #444444;
   padding: 0.65ex 0.5em 0.4ex 0.5em;
   font-weight: normal;
 }
@@ -453,7 +460,7 @@ th, td {
 }
 
 .booktabs th.cmid, th {
-  border-bottom: 1px solid rgb(114.75, 114.75, 114.75);
+  border-bottom: 1px solid rgb(131.75, 131.75, 131.75);
 }
 
 .booktabs th.nocmid {
@@ -580,7 +587,7 @@ blockquote .sidenote, blockquote .marginnote {
 .sidenote-number:after, .sidenote:before {
   content: counter(sidenote-counter) " ";
   font-family: et-bembo-roman-old-style;
-  color: #a00000;
+  color: #007aff;
   position: relative;
   vertical-align: baseline;
 }
@@ -594,7 +601,7 @@ blockquote .sidenote, blockquote .marginnote {
 
 .sidenote:before {
   content: counter(sidenote-counter) ". ";
-  color: #a00000;
+  color: #007aff;
   top: 0rem;
 }
 
@@ -668,7 +675,7 @@ label.margin-toggle:not(.sidenote-number) {
 @media (max-width: 760px) {
   label.margin-toggle:not(.sidenote-number) {
     display: inline;
-    color: #a00000;
+    color: #007aff;
   }
   .sidenote, .marginnote {
     display: none;
@@ -723,7 +730,7 @@ label.margin-toggle:not(.sidenote-number) {
 /*--- End of Basic Layout stuff from tufte.css ---*/
 /* -- Jekyll specific styling --*/
 .contrast {
-  color: #a00000;
+  color: #007aff;
 }
 
 .smaller {
@@ -748,7 +755,7 @@ header > nav a {
   font-family: "Gill Sans", "Gill Sans MT", "Gotham Narrow", "Lato", Calibri, sans-serif;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #a00000;
+  color: #007aff;
   padding-top: 1.5rem;
   text-decoration: none;
   display: inline-block;
@@ -757,6 +764,23 @@ header > nav a {
   margin-bottom: 0;
   padding-right: 2rem;
   vertical-align: baseline;
+}
+
+header > nav a.site-title {
+  font-family: "Gill Sans", "Gill Sans MT", "Gotham Narrow", "Lato", Calibri, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-variant: small-caps;
+  color: #e8e6e3;
+  padding-top: 1.5rem;
+  font-style: normal;
+  transition: color 0.3s ease;
+}
+
+header > nav a.site-title:hover {
+  color: #007aff;
 }
 
 header > nav a img {
@@ -785,7 +809,7 @@ ul.footer-links li {
   font-family: "Gill Sans", "Gill Sans MT", "Gotham Narrow", "Lato", Calibri, sans-serif;
 }
 .credits a {
-  color: #a00000;
+  color: #007aff;
 }
 
 body.full-width, .content-listing, ul.content-listing li.listing {
@@ -837,10 +861,10 @@ hr.slender {
   height: 1px;
   margin-top: 1.4rem;
   margin-bottom: 1.4rem;
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-  background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+  background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+  background-image: -ms-linear-gradient(left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+  background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
 }
 
 @media screen {
