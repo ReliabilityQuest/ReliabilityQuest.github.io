@@ -4,7 +4,7 @@ subtitle: Intentional improvement
 author: Reliability Quest
 simple_search: http://google.com/search
 description: The quest for less unplanned downtime.
-name: tufte
+name: Reliability Quest
 markdown: kramdown
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 permalink: /articles/:short_year/:title

@@ -303,7 +303,7 @@ html {
 }
 
 a {
-  color: #007aff;
+  color: rgb(67, 133, 190);
   text-decoration: none;
 }
 
@@ -587,7 +587,7 @@ blockquote .sidenote, blockquote .marginnote {
 .sidenote-number:after, .sidenote:before {
   content: counter(sidenote-counter) " ";
   font-family: et-bembo-roman-old-style;
-  color: #007aff;
+  color: rgb(67, 133, 190);
   position: relative;
   vertical-align: baseline;
 }
@@ -601,7 +601,7 @@ blockquote .sidenote, blockquote .marginnote {
 
 .sidenote:before {
   content: counter(sidenote-counter) ". ";
-  color: #007aff;
+  color: rgb(67, 133, 190);
   top: 0rem;
 }
 
@@ -675,7 +675,7 @@ label.margin-toggle:not(.sidenote-number) {
 @media (max-width: 760px) {
   label.margin-toggle:not(.sidenote-number) {
     display: inline;
-    color: #007aff;
+    color: rgb(67, 133, 190);
   }
   .sidenote, .marginnote {
     display: none;
@@ -730,7 +730,7 @@ label.margin-toggle:not(.sidenote-number) {
 /*--- End of Basic Layout stuff from tufte.css ---*/
 /* -- Jekyll specific styling --*/
 .contrast {
-  color: #007aff;
+  color: rgb(67, 133, 190);
 }
 
 .smaller {
@@ -755,7 +755,7 @@ header > nav a {
   font-family: "Gill Sans", "Gill Sans MT", "Gotham Narrow", "Lato", Calibri, sans-serif;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #007aff;
+  color: rgb(67, 133, 190);
   padding-top: 1.5rem;
   text-decoration: none;
   display: inline-block;
@@ -780,7 +780,7 @@ header > nav a.site-title {
 }
 
 header > nav a.site-title:hover {
-  color: #007aff;
+  color: rgb(67, 133, 190);
 }
 
 header > nav a img {
@@ -809,7 +809,7 @@ ul.footer-links li {
   font-family: "Gill Sans", "Gill Sans MT", "Gotham Narrow", "Lato", Calibri, sans-serif;
 }
 .credits a {
-  color: #007aff;
+  color: rgb(67, 133, 190);
 }
 
 body.full-width, .content-listing, ul.content-listing li.listing {
