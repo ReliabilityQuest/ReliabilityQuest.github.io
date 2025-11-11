@@ -2,17 +2,16 @@
 layout: full-width
 title: About
 ---
+Is all this complexity around asset performance management bullshit?
 
-By definition, reliability is the time you’re not in unplanned downtime divided by the total time. 
+Just like you wouldn't schedule a knee replacement at the average age (65), why are we still doing this for equipment maintenance?
 
-Thinking broadly, there are a few principles that come out when seeking high reliability:
-- you want to minimize surprise
-- It’s okay to plan time off
-- When you take time off, you want to take care of what is needed. 
+What we believe:
 
-Implicit in the above is a desire to not take *too much* time off. 
+There's a machine and a process. They are and will forever be linked. The most perfect physical model always needs to be calibrated when it's punched in the face by reality.
 
-What’s measured gets managed. First, it’s useful to track reliability. Whether it’s part of a larger effort like Overall Equipment Effectiveness or not matter less than understanding where you are. 
+You have a maintenance strategy whether you say it or not. [If you choose not to decide you still have made a choice](https://www.youtube.com/watch?v=urBpdyFCZmo&list=RDurBpdyFCZmo&start_radio=1). 
 
-Once you know where you are, you can plan where you want to go. 
+Much like a doctor, you shouldn't add another measurement unless you can explain how it's going to change your asset strategy.
 
+Is it complicated, sure. Complex? No.
