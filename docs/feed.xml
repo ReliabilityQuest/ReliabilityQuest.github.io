@@ -3,10 +3,10 @@
   <channel>
     <title>Reliability Quest</title>
     <description>The quest for less unplanned downtime.</description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 10 Nov 2025 20:49:57 -0500</pubDate>
-    <lastBuildDate>Mon, 10 Nov 2025 20:49:57 -0500</lastBuildDate>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 10 Nov 2025 20:52:17 -0500</pubDate>
+    <lastBuildDate>Mon, 10 Nov 2025 20:52:17 -0500</lastBuildDate>
     <generator>Jekyll v4.4.1</generator>
     
       <item>
@@ -83,8 +83,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Fri, 11 Jul 2025 13:04:01 -0400</pubDate>
-        <link>http://localhost:4000/articles/25/Value</link>
-        <guid isPermaLink="true">http://localhost:4000/articles/25/Value</guid>
+        <link>/articles/25/Value</link>
+        <guid isPermaLink="true">/articles/25/Value</guid>
         
         
         <category>post</category>
@@ -122,8 +122,8 @@
 &lt;p&gt;We can help. Let’s talk at hello@reliability.quest&lt;/p&gt;
 </description>
         <pubDate>Sun, 13 Apr 2025 13:04:01 -0400</pubDate>
-        <link>http://localhost:4000/articles/25/Myst</link>
-        <guid isPermaLink="true">http://localhost:4000/articles/25/Myst</guid>
+        <link>/articles/25/Myst</link>
+        <guid isPermaLink="true">/articles/25/Myst</guid>
         
         
         <category>post</category>
