@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>An inquiry into value</title>
-  <meta name="description" content="      How APM generates value    Deploying an Asset Performance Management (APM) solution can bring tremendous value to the customer. What follows is an expl...">
+  <meta name="description" content="How APM generates valueDeploying an Asset Performance Management (APM) solution can bring tremendous value to the customer. What follows is an explanation on...">
 
   <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
   
@@ -42,9 +42,9 @@
   <link rel="stylesheet" type="text/css" href="/css/tufte.css">
   <!-- <link rel="stylesheet" type="text/css" href="/css/print.css" media="print"> -->
 
-  <link rel="canonical" href="/articles/25/Value">
+  <link rel="canonical" href="http://localhost:4000/articles/25/Value">
 
-  <link rel="alternate" type="application/rss+xml" title="Reliability Quest" href="/feed.xml" />
+  <link rel="alternate" type="application/rss+xml" title="Reliability Quest" href="http://localhost:4000/feed.xml" />
 </head>
 
   <body>
@@ -87,13 +87,9 @@
       <h1>An inquiry into value</h1>
 <p class="subtitle">July 11, 2025</p>
 
-<ul>
-  <li>
-    <h2 id="how-apm-generates-value">How APM generates value</h2>
+<h2 id="how-apm-generates-value">How APM generates value</h2>
 
-    <p>Deploying an Asset Performance Management (APM) solution can bring tremendous value to the customer. What follows is an explanation on how the customer can estimate the value they could expect to achieve.</p>
-  </li>
-</ul>
+<p>Deploying an Asset Performance Management (APM) solution can bring tremendous value to the customer. What follows is an explanation on how the customer can estimate the value they could expect to achieve.</p>
 
 <!--more-->
 
@@ -104,59 +100,46 @@
   <li>Decreasing maintenance cost by moving unplanned maintenance into planned and fixing problems before they grow in severity.</li>
 </ol>
 
-<ul>
-  <li>
-    <h2 id="increasing-production-by-avoiding-unplanned-downtime">Increasing production by avoiding unplanned downtime</h2>
-  </li>
-  <li>
-    <h3 id="where-the-value-comes-from">Where the value comes from</h3>
+<h2 id="increasing-production-by-avoiding-unplanned-downtime">Increasing production by avoiding unplanned downtime</h2>
+<h3 id="where-the-value-comes-from">Where the value comes from</h3>
 
-    <p>Asset Performance Management seeks to provide early and insightful information to maintenance and operations such that they can avoid unplanned equipment breakdown. By avoiding something that would have tripped or shut down the line, they are able to produce when they plan to.</p>
+<p>Asset Performance Management seeks to provide early and insightful information to maintenance and operations such that they can avoid unplanned equipment breakdown. By avoiding something that would have tripped or shut down the line, they are able to produce when they plan to.</p>
 
-    <p>Depending on the plant’s business environment, sometimes there are penalties associated with lost production (a power plant that trips when it had bid into production for that day) or there are limits on daily production so that any unplanned downtime is a loss that cannot be recovered. An example of this is an offshore platform in the Gulf of Mexico can only produce a certain amount every day, so if it has to shut down because of a compressor leak for the entire day, that day’s worth of revenue is gone.</p>
+<p>Depending on the plant’s business environment, sometimes there are penalties associated with lost production (a power plant that trips when it had bid into production for that day) or there are limits on daily production so that any unplanned downtime is a loss that cannot be recovered. An example of this is an offshore platform in the Gulf of Mexico can only produce a certain amount every day, so if it has to shut down because of a compressor leak for the entire day, that day’s worth of revenue is gone.</p>
 
-    <p>Understanding the customer’s business model is critical to estimate what impact APM would have on lost production avoidance.</p>
-  </li>
-  <li>
-    <h3 id="how-to-estimate-the-value">How to estimate the value</h3>
+<p>Understanding the customer’s business model is critical to estimate what impact APM would have on lost production avoidance.</p>
 
-    <p>There are at least two ways to estimate the effects of implementing APM on production or revenue. The first is recommended.</p>
+<h3 id="how-to-estimate-the-value">How to estimate the value</h3>
 
-    <p>Understand the customer’s reliability over the past few years. This reliability is defined traditionally as a ratio of Unplanned Outage Hours (UOH[^Taken from <a href="https://www.nerc.com/comm/PC/Generating%20Availability%20Data%20System%20Working%20Gro1/Item%203b_%20Appendix_F%20-%20Equations%20Rev1.pdf">NERC’s definition</a>: Sum of all hours experienced during Forced Outages (U1, U2, U3) + Startup Failures (SF) + Maintenance Outages (MO) + Maintenance Outage Extensions (ME) of any Maintenance Outages (MO).
-]) to the number of hours in a year.</p>
+<p>There are at least two ways to estimate the effects of implementing APM on production or revenue. The first is recommended.</p>
+
+<p>Understand the customer’s reliability over the past few years. This reliability is defined traditionally as a ratio of Unplanned Outage Hours (UOH[^Taken from <a href="https://www.nerc.com/comm/PC/Generating%20Availability%20Data%20System%20Working%20Gro1/Item%203b_%20Appendix_F%20-%20Equations%20Rev1.pdf">NERC’s definition</a>: Sum of all hours experienced during Forced Outages (U1, U2, U3) + Startup Failures (SF) + Maintenance Outages (MO) + Maintenance Outage Extensions (ME) of any Maintenance Outages (MO).]) to the number of hours in a year.</p>
 
 \[Reliability = 1 - \frac{UOH}{8,760}\]
 
-    <p>Since APM is reducing some of the unplanned downtime, it will, by definition, increase reliability. A reasonable an conservative estimate of the amount of reliability to improve is 20%[^If you’d like an explanation where this 20% came from, email or call me.].</p>
+<p>Since APM is reducing some of the unplanned downtime, it will, by definition, increase reliability. A reasonable an conservative estimate of the amount of reliability to improve is 20%[^If you’d like an explanation where this 20% came from, email or call me.].</p>
 
-    <p>Applying this benefit on an annual basis would be:</p>
+<p>Applying this benefit on an annual basis would be:</p>
 
 \[Benefit = 0.2 * \frac{UOH}{8,760}\]
 
-    <p>This provides an estimated additional hours per year that the plant or asset can produce. If you multiply this by the dollars per hour that the plant makes at full capacity, you have your estimate at what additional revenue APM can bring on an annual basis.</p>
+<p>This provides an estimated additional hours per year that the plant or asset can produce. If you multiply this by the dollars per hour that the plant makes at full capacity, you have your estimate at what additional revenue APM can bring on an annual basis.</p>
 
-    <p>I also like to take the company’s EBIDTA margin (or whatever margin they typically refer to in their annual report) and translate that revenue into something closer to earnings or profit. It’s a more accurate estimate of customer value than revenue itself.</p>
+<p>I also like to take the company’s EBIDTA margin (or whatever margin they typically refer to in their annual report) and translate that revenue into something closer to earnings or profit. It’s a more accurate estimate of customer value than revenue itself.</p>
 
-    <p>The second method involves stepping through past work orders and classifying a probability of detecting as well as an impact to the detection. This is cumbersome and also a guess. It is possible to do it, but it will typically not improve the fidelity of the value assessment.</p>
-  </li>
-  <li>
-    <h2 id="decreasing-maintenance-cost">Decreasing maintenance cost</h2>
-  </li>
-  <li>
-    <h3 id="where-the-value-comes-from-1">Where the value comes from</h3>
+<p>The second method involves stepping through past work orders and classifying a probability of detecting as well as an impact to the detection. This is cumbersome and also a guess. It is possible to do it, but it will typically not improve the fidelity of the value assessment.</p>
 
-    <p>APM also improves a customer’s bottom line by reducing maintenance cost. By moving unplanned maintenance to planned, work is safer, cheaper, and sometimes faster. One anecdote here is that in a combined cycle power plant, a generator rewind costs on the order of $800k for labor/materials, and takes on the order of three weeks to perform. If this generator rewind comes as a surprise, it costs over $2 million dollars and takes about the same amount of time!</p>
-  </li>
-  <li>
-    <h3 id="how-to-estimate-the-value-1">How to estimate the value</h3>
+<h2 id="decreasing-maintenance-cost">Decreasing maintenance cost</h2>
+<h3 id="where-the-value-comes-from-1">Where the value comes from</h3>
 
-    <p>By reviewing a customer’s annual reports or investor presentations, you sometimes can infer what their annual maintenance cost is. If the customer is open, try asking them. I have found the customer to be much more open if I come in with an estimated number first. For example, I estimated that an air separation company in the US had a total maintenance budget of around $350M. When I presented that in the spreadsheet, one of the reliability directors corrected me and said they were closer to $325M. My point is not to illustrate that I got close, but to note that if we put in the effort to try and understand their business and how we are going to help them, they are more willing to collaborate.</p>
+<p>APM also improves a customer’s bottom line by reducing maintenance cost. By moving unplanned maintenance to planned, work is safer, cheaper, and sometimes faster. One anecdote here is that in a combined cycle power plant, a generator rewind costs on the order of $800k for labor/materials, and takes on the order of three weeks to perform. If this generator rewind comes as a surprise, it costs over $2 million dollars and takes about the same amount of time!</p>
+<h3 id="how-to-estimate-the-value-1">How to estimate the value</h3>
 
-    <p>Once one has a maintenance budget to work with, estimate a first year benefit of a 5% reduction. If you want to be even more precise, seek to understand the mix of the maintenance spend between planned and unplanned. For the sake of simplicity, I’ve assumed a 50/50 split and then a 10% reduction on the unplanned maintenance cost. This is a conservative estimate that attempts to account for the change management associated with deploying an APM solution. A 10% reduction can be applied in further years (or a 20% reduction in unplanned maintenance).</p>
+<p>By reviewing a customer’s annual reports or investor presentations, you sometimes can infer what their annual maintenance cost is. If the customer is open, try asking them. I have found the customer to be much more open if I come in with an estimated number first.</p>
 
-    <p>Is this too conservative? Perhaps, but the reality is that APM can generate value that is an order of magnitude more that its cost, the catch is it’s not evenly distributed. The lower a plant’s reliability, the bigger the upside, but also the faster that they will achieve significant value, simply from the frequency of unplanned events occurring.</p>
-  </li>
-</ul>
+<p>Once one has a maintenance budget to work with, estimate a first year benefit of a 5% reduction. If you want to be even more precise, seek to understand the mix of the maintenance spend between planned and unplanned. For the sake of simplicity, I’ve assumed a 50/50 split and then a 10% reduction on the unplanned maintenance cost. This is a conservative estimate that attempts to account for the change management associated with deploying an APM solution. A 10% reduction can be applied in further years (or a 20% reduction in unplanned maintenance).</p>
+
+<p>Is this too conservative? Perhaps, but the reality is that APM can generate value that is an order of magnitude more that its cost, the catch is it’s not evenly distributed. The lower a plant’s reliability, the bigger the upside, but also the faster that they will achieve significant value, simply from the frequency of unplanned events occurring.</p>
 
 
 
