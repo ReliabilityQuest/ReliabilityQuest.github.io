@@ -1056,6 +1056,92 @@ hr.slender {
 }
 
 /*-- End of Icomoon icon font section --*/
+/* Newsletter Signup Form */
+.newsletter-signup {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 0;
+  text-align: center;
+}
+
+.newsletter-description {
+  font-family: "Gill Sans", "Gill Sans MT", "Gotham Narrow", "Lato", Calibri, sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.newsletter-form {
+  width: 100%;
+}
+
+.newsletter-input-group {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.newsletter-input {
+  flex: 1;
+  max-width: 300px;
+  padding: 0.6rem 1rem;
+  font-family: ETBembo, "Chronicle Text G2", Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+  font-size: 1.1rem;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 0.25rem;
+  transition: all 0.3s ease;
+}
+
+.newsletter-input:focus {
+  outline: none;
+  border-color: var(--contrast-color);
+  box-shadow: 0 0 0 2px rgba(67, 133, 190, 0.1);
+}
+
+.newsletter-button {
+  padding: 0.6rem 1.5rem;
+  font-family: "Gill Sans", "Gill Sans MT", "Gotham Narrow", "Lato", Calibri, sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  color: var(--bg-color);
+  background-color: var(--contrast-color);
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.newsletter-button:hover {
+  opacity: 0.8;
+  transform: translateY(-1px);
+}
+
+.newsletter-button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 760px) {
+  .newsletter-signup {
+    max-width: 90%;
+    margin: 1.5rem auto;
+  }
+  .newsletter-input-group {
+    flex-direction: column;
+    align-items: center;
+  }
+  .newsletter-input {
+    max-width: 100%;
+    width: 100%;
+  }
+  .newsletter-button {
+    width: 100%;
+  }
+}
 /* Theme Toggle Switch */
 .theme-toggle {
   position: fixed;
