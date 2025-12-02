@@ -261,6 +261,22 @@ html, body {
   height: 100%;
 }
 
+:root {
+  --text-color: #e8e6e3;
+  --bg-color: #1a1a1a;
+  --contrast-color: rgb(67, 133, 190);
+  --border-color: #444444;
+  --code-bg-color: #252525;
+}
+
+[data-theme=light] {
+  --text-color: #333333;
+  --bg-color: #fffff8;
+  --contrast-color: rgb(45, 100, 150);
+  --border-color: #cccccc;
+  --code-bg-color: #f5f5f0;
+}
+
 html {
   text-align: baseline;
   font-size: 11px;
@@ -303,20 +319,20 @@ html {
 }
 
 a {
-  color: rgb(67, 133, 190);
+  color: var(--contrast-color);
   text-decoration: none;
 }
 
 p > a, cite > a, span > a {
-  color: #e8e6e3;
+  color: var(--text-color);
   text-decoration: none;
-  background: -webkit-linear-gradient(#1a1a1a, #1a1a1a), -webkit-linear-gradient(#1a1a1a, #1a1a1a), -webkit-linear-gradient(currentColor, currentColor);
-  background: linear-gradient(#1a1a1a, #1a1a1a), linear-gradient(#1a1a1a, #1a1a1a), linear-gradient(currentColor, currentColor);
+  background: -webkit-linear-gradient(var(--bg-color), var(--bg-color)), -webkit-linear-gradient(var(--bg-color), var(--bg-color)), -webkit-linear-gradient(currentColor, currentColor);
+  background: linear-gradient(var(--bg-color), var(--bg-color)), linear-gradient(var(--bg-color), var(--bg-color)), linear-gradient(currentColor, currentColor);
   -webkit-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
   -moz-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
   background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
   background-repeat: no-repeat, no-repeat, repeat-x;
-  text-shadow: 0.03em 0 #1a1a1a, -0.03em 0 #1a1a1a, 0 0.03em #1a1a1a, 0 -0.03em #1a1a1a, 0.06em 0 #1a1a1a, -0.06em 0 #1a1a1a, 0.09em 0 #1a1a1a, -0.09em 0 #1a1a1a, 0.12em 0 #1a1a1a, -0.12em 0 #1a1a1a, 0.15em 0 #1a1a1a, -0.15em 0 #1a1a1a;
+  text-shadow: 0.03em 0 var(--bg-color), -0.03em 0 var(--bg-color), 0 0.03em var(--bg-color), 0 -0.03em var(--bg-color), 0.06em 0 var(--bg-color), -0.06em 0 var(--bg-color), 0.09em 0 var(--bg-color), -0.09em 0 var(--bg-color), 0.12em 0 var(--bg-color), -0.12em 0 var(--bg-color), 0.15em 0 var(--bg-color), -0.15em 0 var(--bg-color);
   background-position: 0% 93%, 100% 93%, 0% 93%;
 }
 
@@ -326,10 +342,11 @@ body {
   margin-right: auto;
   padding-left: 12.5%;
   font-family: ETBembo, "Chronicle Text G2", Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
-  background-color: #1a1a1a;
-  color: #e8e6e3;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   max-width: 1400px;
   counter-reset: sidenote-counter;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1 {
@@ -444,12 +461,12 @@ h1 code, h2 code, h3 code {
 table, table.booktabs {
   width: auto;
   border-spacing: 0px;
-  border-top: 2px solid #444444;
-  border-bottom: 2px solid #444444;
+  border-top: 2px solid var(--border-color);
+  border-bottom: 2px solid var(--border-color);
 }
 
 .booktabs th, th {
-  border-bottom: 1px solid #444444;
+  border-bottom: 1px solid var(--border-color);
   padding: 0.65ex 0.5em 0.4ex 0.5em;
   font-weight: normal;
 }
@@ -587,7 +604,7 @@ blockquote .sidenote, blockquote .marginnote {
 .sidenote-number:after, .sidenote:before {
   content: counter(sidenote-counter) " ";
   font-family: et-bembo-roman-old-style;
-  color: rgb(67, 133, 190);
+  color: var(--contrast-color);
   position: relative;
   vertical-align: baseline;
 }
@@ -601,7 +618,7 @@ blockquote .sidenote, blockquote .marginnote {
 
 .sidenote:before {
   content: counter(sidenote-counter) ". ";
-  color: rgb(67, 133, 190);
+  color: var(--contrast-color);
   top: 0rem;
 }
 
@@ -675,7 +692,7 @@ label.margin-toggle:not(.sidenote-number) {
 @media (max-width: 760px) {
   label.margin-toggle:not(.sidenote-number) {
     display: inline;
-    color: rgb(67, 133, 190);
+    color: var(--contrast-color);
   }
   .sidenote, .marginnote {
     display: none;
@@ -730,7 +747,7 @@ label.margin-toggle:not(.sidenote-number) {
 /*--- End of Basic Layout stuff from tufte.css ---*/
 /* -- Jekyll specific styling --*/
 .contrast {
-  color: rgb(67, 133, 190);
+  color: var(--contrast-color);
 }
 
 .smaller {
@@ -755,7 +772,7 @@ header > nav a {
   font-family: "Gill Sans", "Gill Sans MT", "Gotham Narrow", "Lato", Calibri, sans-serif;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: rgb(67, 133, 190);
+  color: var(--contrast-color);
   padding-top: 1.5rem;
   text-decoration: none;
   display: inline-block;
@@ -773,14 +790,14 @@ header > nav a.site-title {
   letter-spacing: 0.15em;
   text-transform: uppercase;
   font-variant: small-caps;
-  color: #e8e6e3;
+  color: var(--text-color);
   padding-top: 1.5rem;
   font-style: normal;
   transition: color 0.3s ease;
 }
 
 header > nav a.site-title:hover {
-  color: rgb(67, 133, 190);
+  color: var(--contrast-color);
 }
 
 header > nav a img {
@@ -801,6 +818,15 @@ ul.footer-links li {
   padding: 0.5rem 0.25rem;
 }
 
+ul.footer-links a {
+  color: var(--contrast-color);
+  transition: opacity 0.3s ease;
+}
+
+ul.footer-links a:hover {
+  opacity: 0.7;
+}
+
 .credits {
   padding: 1rem 0rem;
 }
@@ -809,7 +835,7 @@ ul.footer-links li {
   font-family: "Gill Sans", "Gill Sans MT", "Gotham Narrow", "Lato", Calibri, sans-serif;
 }
 .credits a {
-  color: rgb(67, 133, 190);
+  color: var(--contrast-color);
 }
 
 body.full-width, .content-listing, ul.content-listing li.listing {
@@ -1030,5 +1056,88 @@ hr.slender {
 }
 
 /*-- End of Icomoon icon font section --*/
+/* Theme Toggle Switch */
+.theme-toggle {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 5rem;
+  height: 2.5rem;
+  border-radius: 2rem;
+  background-color: var(--bg-color);
+  border: 2px solid var(--border-color);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0.25rem;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.theme-toggle:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.theme-toggle-slider {
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  background-color: var(--contrast-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+[data-theme=light] .theme-toggle-slider {
+  transform: translateX(2.5rem);
+}
+
+.theme-icon {
+  width: 1rem;
+  height: 1rem;
+  fill: var(--bg-color);
+  stroke: var(--bg-color);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: opacity 0.3s ease;
+}
+
+.theme-icon-sun {
+  display: none;
+}
+
+[data-theme=light] .theme-icon-moon {
+  display: none;
+}
+
+[data-theme=light] .theme-icon-sun {
+  display: block;
+}
+
+@media (max-width: 760px) {
+  .theme-toggle {
+    bottom: 1rem;
+    right: 1rem;
+    width: 4rem;
+    height: 2rem;
+    padding: 0.2rem;
+  }
+  .theme-toggle-slider {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+  .theme-icon {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+  [data-theme=light] .theme-toggle-slider {
+    transform: translateX(2rem);
+  }
+}
 
 /*# sourceMappingURL=tufte.css.map */

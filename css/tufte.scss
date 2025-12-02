@@ -30,6 +30,24 @@ nav_exclude: true
 
 html, body { height: 100%; }
 
+// CSS Custom Properties for theme switching
+:root {
+  --text-color: #{$text-color};
+  --bg-color: #{$bg-color};
+  --contrast-color: #{$contrast-color};
+  --border-color: #{$border-color};
+  --code-bg-color: #{$code-bg-color};
+}
+
+// Light theme colors
+[data-theme="light"] {
+  --text-color: #333333;
+  --bg-color: #fffff8;
+  --contrast-color: rgb(45, 100, 150);
+  --border-color: #cccccc;
+  --code-bg-color: #f5f5f0;
+}
+
 // First significant deviation from CSS on tufte.css site - variable font size as browser width expands or contracts
 //html { font-size: 15px; }
 
@@ -59,26 +77,26 @@ html{
 }
 // sets link style according to values in _settings.scss
 a {
-  color: $contrast-color;
+  color: var(--contrast-color);
   text-decoration: none;
 }
 
 p > a, cite > a, span > a { @if $link-style == underline
     {
-      color: $text-color;
+      color: var(--text-color);
       text-decoration: none;
-      background: -webkit-linear-gradient($bg-color, $bg-color), -webkit-linear-gradient($bg-color, $bg-color), -webkit-linear-gradient(currentColor, currentColor);
-      background: linear-gradient($bg-color, $bg-color), linear-gradient($bg-color, $bg-color), linear-gradient(currentColor, currentColor);
+      background: -webkit-linear-gradient(var(--bg-color), var(--bg-color)), -webkit-linear-gradient(var(--bg-color), var(--bg-color)), -webkit-linear-gradient(currentColor, currentColor);
+      background: linear-gradient(var(--bg-color), var(--bg-color)), linear-gradient(var(--bg-color), var(--bg-color)), linear-gradient(currentColor, currentColor);
       -webkit-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
       -moz-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
       background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
       background-repeat: no-repeat, no-repeat, repeat-x;
-      text-shadow: 0.03em 0 $bg-color, -0.03em 0 $bg-color, 0 0.03em $bg-color, 0 -0.03em $bg-color, 0.06em 0 $bg-color, -0.06em 0 $bg-color, 0.09em 0 $bg-color, -0.09em 0 $bg-color, 0.12em 0 $bg-color, -0.12em 0 $bg-color, 0.15em 0 $bg-color, -0.15em 0 $bg-color;
-      background-position: 0% 93%, 100% 93%, 0% 93%; 
+      text-shadow: 0.03em 0 var(--bg-color), -0.03em 0 var(--bg-color), 0 0.03em var(--bg-color), 0 -0.03em var(--bg-color), 0.06em 0 var(--bg-color), -0.06em 0 var(--bg-color), 0.09em 0 var(--bg-color), -0.09em 0 var(--bg-color), 0.12em 0 var(--bg-color), -0.12em 0 var(--bg-color), 0.15em 0 var(--bg-color), -0.15em 0 var(--bg-color);
+      background-position: 0% 93%, 100% 93%, 0% 93%;
     }
     @else
     {
-      color: $contrast-color;
+      color: var(--contrast-color);
       text-decoration: none;
     }
   }
@@ -88,10 +106,11 @@ body { width: 87.5%;
        margin-right: auto;
        padding-left: 12.5%;
        font-family: $body-font;
-       background-color: $bg-color;
-       color: $text-color;
+       background-color: var(--bg-color);
+       color: var(--text-color);
        max-width: 1400px;
-       counter-reset: sidenote-counter; }
+       counter-reset: sidenote-counter;
+       transition: background-color 0.3s ease, color 0.3s ease; }
 
 // --------- Typography stuff -----------//
 // added rational line height and margins ala http://webtypography.net/intro/
@@ -184,13 +203,13 @@ h1 code, h2 code, h3 code { font-size: 0.80em; } //left in for no real reason
 table, table.booktabs { width: auto;  //making booktabs style tables the unstyled default in case someone uses Markdown styling
                  //margin: 0 auto;
                  border-spacing: 0px;
-                 border-top: 2px solid $border-color;
-                 border-bottom: 2px solid $border-color; }
+                 border-top: 2px solid var(--border-color);
+                 border-bottom: 2px solid var(--border-color); }
 
-.booktabs th, th { border-bottom: 1px solid $border-color;
+.booktabs th, th { border-bottom: 1px solid var(--border-color);
                padding: 0.65ex 0.5em 0.4ex 0.5em;
                font-weight: normal;
-               //text-align: center; 
+               //text-align: center;
                }
 
 th, td{ font-size: 1.2rem;
@@ -285,7 +304,7 @@ blockquote .sidenote, blockquote .marginnote { margin-right: -79% }
 
 .sidenote-number:after, .sidenote:before { content: counter(sidenote-counter) " ";
                                            font-family: et-bembo-roman-old-style;
-                                           color: $contrast-color; //added color
+                                           color: var(--contrast-color); //added color
                                            position: relative;
                                            vertical-align: baseline; }
 
@@ -295,7 +314,7 @@ blockquote .sidenote, blockquote .marginnote { margin-right: -79% }
                          left: 0.1rem; }
 
 .sidenote:before { content: counter(sidenote-counter) ".\000a0"; // this is unicode for a non-breaking space
-                   color: $contrast-color;
+                   color: var(--contrast-color);
                    top: 0rem; } //removed superscripting for numerical reference in sidenote
 
 p, footer, div.table-wrapper,  .MJXc-display, .MathJax { width: 55%; }
@@ -333,7 +352,7 @@ label.sidenote-number { display: inline; }
 
 label.margin-toggle:not(.sidenote-number) { display: none; }
 
-@media (max-width: 760px) { label.margin-toggle:not(.sidenote-number) { display: inline; color: $contrast-color; }
+@media (max-width: 760px) { label.margin-toggle:not(.sidenote-number) { display: inline; color: var(--contrast-color); }
                             .sidenote, .marginnote { display: none; }
                             .margin-toggle:checked + .sidenote,
                             .margin-toggle:checked + .marginnote { display: block;
@@ -368,7 +387,7 @@ label.margin-toggle:not(.sidenote-number) { display: none; }
 /* -- Jekyll specific styling --*/
 //helper classes
 
-.contrast { color: $contrast-color;}
+.contrast { color: var(--contrast-color);}
 .smaller { font-size: 80%;}
 //Nav and Footer styling area
 
@@ -385,7 +404,7 @@ header > nav  a{
   font-family: $sans-font;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: $contrast-color;
+  color: var(--contrast-color);
   padding-top: 1.5rem;
   text-decoration: none;
   display: inline-block;
@@ -403,13 +422,13 @@ header > nav a.site-title {
   letter-spacing: 0.15em;
   text-transform: uppercase;
   font-variant: small-caps;
-  color: $text-color;
+  color: var(--text-color);
   padding-top: 1.5rem;
   font-style: normal;
   transition: color 0.3s ease;
 }
 header > nav a.site-title:hover {
-  color: $contrast-color;
+  color: var(--contrast-color);
 }
 header > nav a img{
   height: 5rem;
@@ -426,6 +445,13 @@ ul.footer-links li{
   display: inline;
   padding: 0.5rem 0.25rem;
 }
+ul.footer-links a{
+  color: var(--contrast-color);
+  transition: opacity 0.3s ease;
+}
+ul.footer-links a:hover{
+  opacity: 0.7;
+}
 .credits{
   padding: 1rem 0rem;
 }
@@ -435,7 +461,7 @@ ul.footer-links li{
 .credits{
   font-family: $sans-font;
     & a{
-      color: $contrast-color;
+      color: var(--contrast-color);
     }
 }
 
@@ -659,3 +685,90 @@ hr.slender {
   content: "\eae4";
 }
 /*-- End of Icomoon icon font section --*/
+
+/* Theme Toggle Switch */
+.theme-toggle {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 5rem;
+  height: 2.5rem;
+  border-radius: 2rem;
+  background-color: var(--bg-color);
+  border: 2px solid var(--border-color);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0.25rem;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.theme-toggle:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.theme-toggle-slider {
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  background-color: var(--contrast-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+[data-theme="light"] .theme-toggle-slider {
+  transform: translateX(2.5rem);
+}
+
+.theme-icon {
+  width: 1rem;
+  height: 1rem;
+  fill: var(--bg-color);
+  stroke: var(--bg-color);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: opacity 0.3s ease;
+}
+
+.theme-icon-sun {
+  display: none;
+}
+
+[data-theme="light"] .theme-icon-moon {
+  display: none;
+}
+
+[data-theme="light"] .theme-icon-sun {
+  display: block;
+}
+
+@media (max-width: 760px) {
+  .theme-toggle {
+    bottom: 1rem;
+    right: 1rem;
+    width: 4rem;
+    height: 2rem;
+    padding: 0.2rem;
+  }
+
+  .theme-toggle-slider {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+
+  .theme-icon {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+
+  [data-theme="light"] .theme-toggle-slider {
+    transform: translateX(2rem);
+  }
+}
