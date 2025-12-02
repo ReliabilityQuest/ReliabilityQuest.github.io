@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Contact
+title: Lab
 ---
 {% newthought 'You know what you need?'%} Honesty. Your business is humming along with its healthy operating margin, but no one gives a shit. Your improved IRR doesn't mean a thing. You know it was a mix of luck and mediocre decision making. If it hadn't been good fortune, would it have neen your call? Annie Duke calls this *resulting*, but it's you’re ego speaking.
 
