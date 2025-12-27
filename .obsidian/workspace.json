@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HOW_TO_ADD_POSTS.md",
+                "file": "Clippings/What's in my bag - 2021.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "HOW_TO_ADD_POSTS"
+              "title": "What's in my bag - 2021"
             }
           }
         ],
@@ -186,7 +186,13 @@
   },
   "active": "372b250fcfffa02e",
   "lastOpenFiles": [
-    "_posts/2025-11-10-why.md",
-    "HOW_TO_ADD_POSTS.md"
+    "_posts/2025-01-13-Myst.md",
+    "Clippings/What's in my bag - 2021.md",
+    "Clippings",
+    "_posts/2025-07-12-Value.md",
+    "page/index.md",
+    "about/index.md",
+    "HOW_TO_ADD_POSTS.md",
+    "_posts/2025-11-10-why.md"
   ]
 }
