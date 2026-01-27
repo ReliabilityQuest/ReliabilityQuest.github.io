@@ -1,27 +1,10 @@
-baseurl: 
+baseurl:
 title: Reliability Quest
-subtitle: Intentional improvement
 author: Reliability Quest
-simple_search: http://google.com/search
-description: The quest for less unplanned downtime.
+description: Making asset performance management simple.
 name: Reliability Quest
 markdown: kramdown
-markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 permalink: /articles/:short_year/:title
 timezone: America/New_York
-excerpt_separator: <!--more-->  # you can specify your own separator, of course.
-exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'UploadToGithub.Rakefile', 'README.md', 'HOW_TO_ADD_POSTS.md']
-post:
-  template: _post.txt
-  extension: md
-page:
-  template: _page.txt
-  extension: md
-editor: gvim
-git:
-  branch: master
-# transfer:
- # command: rsync
- # settings: -av
- # source: _site/
+exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md', 'node_modules']
 destination: ./docs
