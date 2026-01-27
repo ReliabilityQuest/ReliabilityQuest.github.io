@@ -1,17 +1,227 @@
 ---
-layout: full-width
-title: Articles
-# Note that this index page uses a full-width layout!
 ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reliability Quest</title>
+  <meta name="description" content="Making asset performance management simple.">
+  <link rel="alternate" type="application/rss+xml" title="Reliability Quest" href="/feed.xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <style>
+    :root {
+      --text: #e8e6e3;
+      --bg: #111;
+      --muted: #888;
+      --border: #333;
+      --link: #6ba3d6;
+    }
+    [data-theme="light"] {
+      --text: #222;
+      --bg: #fefefe;
+      --muted: #666;
+      --border: #ddd;
+      --link: #2563eb;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html {
+      font-size: 18px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      transition: background 0.2s, color 0.2s;
+    }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
-  <h1 class="content-listing-header sans">Articles</h1>
-  <ul class="content-listing ">
-    {% for post in site.posts %}      
-        <li class="listing">
-          <hr class="slender">
-          <a href="{{ post.url | prepend: site.baseurl }}"><h3 class="contrast">{{ post.title }}</h3></a>
-          <br><span class="smaller">{{ post.date | date: "%B %-d, %Y" }}</span>  <br/>
-          <div>{{ post.excerpt }}</div> 
-        </li>
-    {% endfor %}
-  </ul>
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 1rem 2rem;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+      transition: transform 0.3s;
+    }
+    header.hidden { transform: translateY(-100%); }
+    .logo { font-weight: 600; font-size: 1.1rem; color: var(--text); }
+    nav a { margin-left: 1.5rem; color: var(--muted); font-size: 0.9rem; }
+    nav a:hover { color: var(--text); text-decoration: none; }
+
+    main { max-width: 680px; margin: 0 auto; padding: 6rem 1.5rem 4rem; }
+
+    .hero { margin-bottom: 3rem; }
+    .hero h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; letter-spacing: -0.02em; }
+    .hero p { color: var(--muted); font-size: 1.1rem; line-height: 1.7; }
+    .hero .more { display: none; }
+    .hero .more.show { display: block; margin-top: 1rem; }
+    .hero button {
+      background: none;
+      border: none;
+      color: var(--link);
+      cursor: pointer;
+      font-size: 0.95rem;
+      padding: 0;
+      margin-top: 0.5rem;
+    }
+
+    section { margin-bottom: 3rem; }
+    section h2 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+
+    .item {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+    }
+    .item:last-child { border-bottom: none; }
+    .item a { font-weight: 500; }
+    .item .date { color: var(--muted); font-size: 0.85rem; white-space: nowrap; }
+
+    .contact { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+    .contact p { color: var(--muted); }
+
+    .theme-toggle {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      background: var(--border);
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @media (max-width: 600px) {
+      html { font-size: 16px; }
+      header { padding: 0.75rem 1rem; }
+      nav a { margin-left: 1rem; }
+      .hero h1 { font-size: 2rem; }
+      main { padding-top: 5rem; }
+    }
+  </style>
+</head>
+<body>
+  <header id="header">
+    <a href="/" class="logo">Reliability Quest</a>
+    <nav>
+      <a href="#articles">Articles</a>
+      <a href="#about">About</a>
+      <a href="#lab">Lab</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h1>Reliability Quest</h1>
+      <p>Making asset performance management simple. Simple questions should have simple answers.</p>
+      <button id="moreBtn">More</button>
+      <div class="more" id="moreContent">
+        <p>Is all this complexity around asset performance management bullshit? Just like you wouldn't schedule a knee replacement at the average age (65), why are we still doing this for equipment maintenance?</p>
+        <p style="margin-top: 0.75rem;">There's a machine and a process. They are and will forever be linked. The most perfect physical model always needs to be calibrated when it's punched in the face by reality.</p>
+      </div>
+    </div>
+
+    <section id="articles">
+      <h2>Articles</h2>
+      {% for post in site.posts %}
+      <div class="item">
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        <span class="date">{{ post.date | date: "%b %Y" }}</span>
+      </div>
+      {% endfor %}
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <p style="color: var(--muted); line-height: 1.7;">You have a maintenance strategy whether you say it or not. <a href="https://www.youtube.com/watch?v=urBpdyFCZmo">If you choose not to decide you still have made a choice</a>. Much like a doctor, you shouldn't add another measurement unless you can explain how it's going to change your asset strategy. Is it complicated, sure. Complex? No.</p>
+    </section>
+
+    <section id="lab">
+      <h2>Lab</h2>
+      <div class="item">
+        <a href="https://podcasts.justcast.com/private/05554e06be7642a6f4acd5fa420f56a6081dc1a8">Podcast</a>
+        <span class="date">Asset Performance</span>
+      </div>
+    </section>
+
+    <div class="contact">
+      <p>Get in touch: <a href="mailto:hello@reliability.quest">hello@reliability.quest</a></p>
+    </div>
+  </main>
+
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+    <span id="themeIcon">☀️</span>
+  </button>
+
+  <script>
+    // Theme toggle
+    const theme = localStorage.getItem('theme') ||
+      (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    document.documentElement.setAttribute('data-theme', theme);
+    document.getElementById('themeIcon').textContent = theme === 'light' ? '🌙' : '☀️';
+
+    document.getElementById('themeToggle').addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      document.getElementById('themeIcon').textContent = next === 'light' ? '🌙' : '☀️';
+    });
+
+    // More button
+    document.getElementById('moreBtn').addEventListener('click', function() {
+      const content = document.getElementById('moreContent');
+      content.classList.toggle('show');
+      this.textContent = content.classList.contains('show') ? 'Less' : 'More';
+    });
+
+    // Auto-hiding header
+    let lastScroll = 0;
+    let hideTimeout;
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('header');
+      const currentScroll = window.pageYOffset;
+
+      if (currentScroll > lastScroll && currentScroll > 100) {
+        header.classList.add('hidden');
+      } else {
+        header.classList.remove('hidden');
+      }
+      lastScroll = currentScroll;
+
+      clearTimeout(hideTimeout);
+      hideTimeout = setTimeout(() => {
+        header.classList.remove('hidden');
+      }, 2000);
+    }, { passive: true });
+  </script>
+</body>
+</html>

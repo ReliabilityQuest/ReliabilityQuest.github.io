@@ -1,102 +1,162 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>An inquiry into value</title>
-  <meta name="description" content="How APM generates valueDeploying an Asset Performance Management (APM) solution can bring tremendous value to the customer. What follows is an explanation on...">
-
-  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
-  
-    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
-  
-  
-<!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
-  
-    <script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    extensions: [
-      "MathMenu.js",
-      "MathZoom.js",
-      "AssistiveMML.js",
-      "a11y/accessibility-menu.js"
-    ],
-    jax: ["input/TeX", "output/CommonHTML"],
-    TeX: {
-      extensions: [
-        "AMSmath.js",
-        "AMSsymbols.js",
-        "noErrors.js",
-        "noUndefined.js",
-      ]
-    }
-  });
-</script>
-
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>  
-
-
-  <link rel="stylesheet" type="text/css" href="/css/tufte.css">
-  <!-- <link rel="stylesheet" type="text/css" href="/css/print.css" media="print"> -->
-
+  <title>An inquiry into value - Reliability Quest</title>
+  <meta name="description" content="How APM generates value
+">
+  <link rel="alternate" type="application/rss+xml" title="Reliability Quest" href="/feed.xml">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
+  
+  <script>
+    MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+  
+  <style>
+    :root {
+      --text: #e8e6e3;
+      --bg: #111;
+      --muted: #888;
+      --border: #333;
+      --link: #6ba3d6;
+    }
+    [data-theme="light"] {
+      --text: #222;
+      --bg: #fefefe;
+      --muted: #666;
+      --border: #ddd;
+      --link: #2563eb;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html {
+      font-size: 18px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      transition: background 0.2s, color 0.2s;
+    }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
-  <link rel="canonical" href="http://localhost:4000/articles/25/Value">
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 1rem 2rem;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+      transition: transform 0.3s;
+    }
+    header.hidden { transform: translateY(-100%); }
+    .logo { font-weight: 600; font-size: 1.1rem; color: var(--text); }
+    nav a { margin-left: 1.5rem; color: var(--muted); font-size: 0.9rem; }
+    nav a:hover { color: var(--text); text-decoration: none; }
 
-  <link rel="alternate" type="application/rss+xml" title="Reliability Quest" href="http://localhost:4000/feed.xml" />
+    main { max-width: 680px; margin: 0 auto; padding: 6rem 1.5rem 4rem; }
+
+    article header {
+      position: static;
+      padding: 0;
+      background: none;
+      border: none;
+      display: block;
+      margin-bottom: 2rem;
+    }
+    article h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.02em;
+      line-height: 1.3;
+    }
+    article .date { color: var(--muted); font-size: 0.9rem; }
+
+    article h2 { font-size: 1.4rem; margin: 2rem 0 1rem; font-weight: 600; }
+    article h3 { font-size: 1.15rem; margin: 1.5rem 0 0.75rem; font-weight: 600; }
+    article p { margin-bottom: 1.25rem; }
+    article ul, article ol { margin: 0 0 1.25rem 1.5rem; }
+    article li { margin-bottom: 0.5rem; }
+    article blockquote {
+      border-left: 3px solid var(--border);
+      padding-left: 1rem;
+      margin: 1.5rem 0;
+      color: var(--muted);
+      font-style: italic;
+    }
+    article code {
+      background: var(--border);
+      padding: 0.15rem 0.4rem;
+      border-radius: 3px;
+      font-size: 0.9rem;
+    }
+    article pre {
+      background: var(--border);
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin: 1.5rem 0;
+    }
+    article pre code { background: none; padding: 0; }
+
+    .back { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+
+    .theme-toggle {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      background: var(--border);
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @media (max-width: 600px) {
+      html { font-size: 16px; }
+      nav { display: none; }
+      article h1 { font-size: 1.75rem; }
+      main { padding-top: 5rem; }
+    }
+  </style>
 </head>
+<body>
+  <header id="header">
+    <a href="/" class="logo">Reliability Quest</a>
+    <nav>
+      <a href="/#articles">Articles</a>
+      <a href="/#about">About</a>
+      <a href="/#lab">Lab</a>
+    </nav>
+  </header>
 
-  <body>
-    <!--- Header and nav template site-wide -->
-<header>
-    <nav class="group">
-	<a href="/" class="site-title">Reliability Quest</a>
-	
-		
-  	
-		
-		    
-		      <a href="/">Articles</a>
-		    
-	    
-  	
-		
-		    
-		      <a href="/page/">Lab</a>
-		    
-	    
-  	
-		
-		    
-		      <a href="/about/">About</a>
-		    
-	    
-  	
-		
-		    
-		      <a href="/css/print.css"></a>
-		    
-	    
-  	
-		
-  	
-	</nav>
-</header>
-    <article class="group">
-      <h1>An inquiry into value</h1>
-<p class="subtitle">July 11, 2025</p>
-
-<h2 id="how-apm-generates-value">How APM generates value</h2>
+  <main>
+    <article>
+      <header>
+        <h1>An inquiry into value</h1>
+        <span class="date">July 11, 2025</span>
+      </header>
+      <h2 id="how-apm-generates-value">How APM generates value</h2>
 
 <p>Deploying an Asset Performance Management (APM) solution can bring tremendous value to the customer. What follows is an explanation on how the customer can estimate the value they could expect to achieve.</p>
-
-<!--more-->
 
 <p>APM generates value through two mechanisms:</p>
 
@@ -106,6 +166,7 @@
 </ol>
 
 <h2 id="increasing-production-by-avoiding-unplanned-downtime">Increasing production by avoiding unplanned downtime</h2>
+
 <h3 id="where-the-value-comes-from">Where the value comes from</h3>
 
 <p>Asset Performance Management seeks to provide early and insightful information to maintenance and operations such that they can avoid unplanned equipment breakdown. By avoiding something that would have tripped or shut down the line, they are able to produce when they plan to.</p>
@@ -118,26 +179,28 @@
 
 <p>There are at least two ways to estimate the effects of implementing APM on production or revenue. The first is recommended.</p>
 
-<p>Understand the customer’s reliability over the past few years. This reliability is defined traditionally as a ratio of Unplanned Outage Hours (UOH[^Taken from <a href="https://www.nerc.com/comm/PC/Generating%20Availability%20Data%20System%20Working%20Gro1/Item%203b_%20Appendix_F%20-%20Equations%20Rev1.pdf">NERC’s definition</a>: Sum of all hours experienced during Forced Outages (U1, U2, U3) + Startup Failures (SF) + Maintenance Outages (MO) + Maintenance Outage Extensions (ME) of any Maintenance Outages (MO).]) to the number of hours in a year.</p>
+<p>Understand the customer’s reliability over the past few years. This reliability is defined traditionally as a ratio of Unplanned Outage Hours (UOH) to the number of hours in a year.</p>
 
-\[Reliability = 1 - \frac{UOH}{8,760}\]
+\[\text{Reliability} = 1 - \frac{\text{UOH}}{8760}\]
 
-<p>Since APM is reducing some of the unplanned downtime, it will, by definition, increase reliability. A reasonable an conservative estimate of the amount of reliability to improve is 20%.</p>
+<p>Since APM is reducing some of the unplanned downtime, it will, by definition, increase reliability. A reasonable and conservative estimate of the amount of reliability to improve is 20%.</p>
 
 <p>Applying this benefit on an annual basis would be:</p>
 
-\[Benefit = 0.2 * \frac{UOH}{8,760}\]
+\[\text{Benefit} = 0.2 \times \frac{\text{UOH}}{8760}\]
 
 <p>This provides an estimated additional hours per year that the plant or asset can produce. If you multiply this by the dollars per hour that the plant makes at full capacity, you have your estimate at what additional revenue APM can bring on an annual basis.</p>
 
-<p>I also like to take the company’s EBIDTA margin (or whatever margin they typically refer to in their annual report) and translate that revenue into something closer to earnings or profit. It’s a more accurate estimate of customer value than revenue itself.</p>
+<p>I also like to take the company’s EBITDA margin (or whatever margin they typically refer to in their annual report) and translate that revenue into something closer to earnings or profit. It’s a more accurate estimate of customer value than revenue itself.</p>
 
 <p>The second method involves stepping through past work orders and classifying a probability of detecting as well as an impact to the detection. This is cumbersome and also a guess. It is possible to do it, but it will typically not improve the fidelity of the value assessment.</p>
 
 <h2 id="decreasing-maintenance-cost">Decreasing maintenance cost</h2>
+
 <h3 id="where-the-value-comes-from-1">Where the value comes from</h3>
 
 <p>APM also improves a customer’s bottom line by reducing maintenance cost. By moving unplanned maintenance to planned, work is safer, cheaper, and sometimes faster. One anecdote here is that in a combined cycle power plant, a generator rewind costs on the order of $800k for labor/materials, and takes on the order of three weeks to perform. If this generator rewind comes as a surprise, it costs over $2 million dollars and takes about the same amount of time!</p>
+
 <h3 id="how-to-estimate-the-value-1">How to estimate the value</h3>
 
 <p>By reviewing a customer’s annual reports or investor presentations, you sometimes can infer what their annual maintenance cost is. If the customer is open, try asking them. I have found the customer to be much more open if I come in with an estimated number first.</p>
@@ -146,93 +209,45 @@
 
 <p>Is this too conservative? Perhaps, but the reality is that APM can generate value that is an order of magnitude more that its cost, the catch is it’s not evenly distributed. The lower a plant’s reliability, the bigger the upside, but also the faster that they will achieve significant value, simply from the frequency of unplanned events occurring.</p>
 
-
-
     </article>
-    <span class="print-footer">An inquiry into value - July 11, 2025 - Reliability Quest</span>
-    <footer>
-  <hr class="slender">
-  <ul class="footer-links">
-    <li><a href="mailto:hello@reliability.quest"><span class="icon-mail3"></span></a></li>
-    
-      <li>
-        <a href="//github.com/ReliabilityQuest"><span class="icon-github"></span></a>
-      </li>
-    
-      <li>
-        <a href="/feed"><span class="icon-rss2"></span></a>
-      </li>
-    
-      <li>
-        <a href="//www.linkedin.com/"><span class="icon-linkedin"></span></a>
-      </li>
-    
-  </ul>
-  <div class="newsletter-signup">
-  <form
-    action="https://buttondown.email/api/emails/embed-subscribe/reliabilityquest"
-    method="post"
-    target="popupwindow"
-    onsubmit="window.open('https://buttondown.com/reliabilityquest', 'popupwindow')"
-    class="newsletter-form"
-  >
-    <div class="newsletter-input-group">
-      <input
-        type="email"
-        name="email"
-        id="bd-email"
-        placeholder="your@email.com"
-        required
-        class="newsletter-input"
-      />
-      <input type="submit" value="Subscribe" class="newsletter-button" />
+
+    <div class="back">
+      <a href="/">&larr; Back to home</a>
     </div>
-  </form>
-</div>
+  </main>
 
-<div class="credits">
-<span>&copy; 2025 &nbsp;&nbsp;RELIABILITY QUEST</span>
-</div>
-</footer>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-      <div class="theme-toggle-slider">
-        <svg class="theme-icon theme-icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 5.5 5.5 0 0 0 21 12.79z"/>
-        </svg>
-        <svg class="theme-icon theme-icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <circle cx="12" cy="12" r="5"/>
-          <line x1="12" y1="1" x2="12" y2="3"/>
-          <line x1="12" y1="21" x2="12" y2="23"/>
-          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-          <line x1="1" y1="12" x2="3" y2="12"/>
-          <line x1="21" y1="12" x2="23" y2="12"/>
-          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-        </svg>
-      </div>
-    </button>
-    <script>
-      // Theme toggle functionality
-      const themeToggle = document.getElementById('themeToggle');
-      const html = document.documentElement;
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+    <span id="themeIcon">☀️</span>
+  </button>
 
-      // Check for saved theme preference or default to dark
-      const currentTheme = localStorage.getItem('theme') || 'dark';
-      if (currentTheme === 'light') {
-        html.setAttribute('data-theme', 'light');
+  <script>
+    const theme = localStorage.getItem('theme') ||
+      (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    document.documentElement.setAttribute('data-theme', theme);
+    document.getElementById('themeIcon').textContent = theme === 'light' ? '🌙' : '☀️';
+
+    document.getElementById('themeToggle').addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      document.getElementById('themeIcon').textContent = next === 'light' ? '🌙' : '☀️';
+    });
+
+    let lastScroll = 0;
+    let hideTimeout;
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('header');
+      const currentScroll = window.pageYOffset;
+      if (currentScroll > lastScroll && currentScroll > 100) {
+        header.classList.add('hidden');
+      } else {
+        header.classList.remove('hidden');
       }
-
-      themeToggle.addEventListener('click', () => {
-        const theme = html.getAttribute('data-theme');
-        if (theme === 'light') {
-          html.removeAttribute('data-theme');
-          localStorage.setItem('theme', 'dark');
-        } else {
-          html.setAttribute('data-theme', 'light');
-          localStorage.setItem('theme', 'light');
-        }
-      });
-    </script>
-  </body>
+      lastScroll = currentScroll;
+      clearTimeout(hideTimeout);
+      hideTimeout = setTimeout(() => header.classList.remove('hidden'), 2000);
+    }, { passive: true });
+  </script>
+</body>
 </html>

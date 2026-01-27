@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Reliability Quest</title>
-    <description>The quest for less unplanned downtime.</description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 02 Dec 2025 14:01:55 -0500</pubDate>
-    <lastBuildDate>Tue, 02 Dec 2025 14:01:55 -0500</lastBuildDate>
+    <description>Making asset performance management simple.</description>
+    <link>http://localhost:4001/</link>
+    <atom:link href="http://localhost:4001/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 27 Jan 2026 11:00:54 -0500</pubDate>
+    <lastBuildDate>Tue, 27 Jan 2026 11:00:54 -0500</lastBuildDate>
     <generator>Jekyll v4.4.1</generator>
     
       <item>
@@ -14,8 +14,6 @@
         <description>&lt;h2 id=&quot;how-apm-generates-value&quot;&gt;How APM generates value&lt;/h2&gt;
 
 &lt;p&gt;Deploying an Asset Performance Management (APM) solution can bring tremendous value to the customer. What follows is an explanation on how the customer can estimate the value they could expect to achieve.&lt;/p&gt;
-
-&lt;!--more--&gt;
 
 &lt;p&gt;APM generates value through two mechanisms:&lt;/p&gt;
 
@@ -25,6 +23,7 @@
 &lt;/ol&gt;
 
 &lt;h2 id=&quot;increasing-production-by-avoiding-unplanned-downtime&quot;&gt;Increasing production by avoiding unplanned downtime&lt;/h2&gt;
+
 &lt;h3 id=&quot;where-the-value-comes-from&quot;&gt;Where the value comes from&lt;/h3&gt;
 
 &lt;p&gt;Asset Performance Management seeks to provide early and insightful information to maintenance and operations such that they can avoid unplanned equipment breakdown. By avoiding something that would have tripped or shut down the line, they are able to produce when they plan to.&lt;/p&gt;
@@ -37,26 +36,28 @@
 
 &lt;p&gt;There are at least two ways to estimate the effects of implementing APM on production or revenue. The first is recommended.&lt;/p&gt;
 
-&lt;p&gt;Understand the customer’s reliability over the past few years. This reliability is defined traditionally as a ratio of Unplanned Outage Hours (UOH[^Taken from &lt;a href=&quot;https://www.nerc.com/comm/PC/Generating%20Availability%20Data%20System%20Working%20Gro1/Item%203b_%20Appendix_F%20-%20Equations%20Rev1.pdf&quot;&gt;NERC’s definition&lt;/a&gt;: Sum of all hours experienced during Forced Outages (U1, U2, U3) + Startup Failures (SF) + Maintenance Outages (MO) + Maintenance Outage Extensions (ME) of any Maintenance Outages (MO).]) to the number of hours in a year.&lt;/p&gt;
+&lt;p&gt;Understand the customer’s reliability over the past few years. This reliability is defined traditionally as a ratio of Unplanned Outage Hours (UOH) to the number of hours in a year.&lt;/p&gt;
 
-\[Reliability = 1 - \frac{UOH}{8,760}\]
+\[\text{Reliability} = 1 - \frac{\text{UOH}}{8760}\]
 
-&lt;p&gt;Since APM is reducing some of the unplanned downtime, it will, by definition, increase reliability. A reasonable an conservative estimate of the amount of reliability to improve is 20%.&lt;/p&gt;
+&lt;p&gt;Since APM is reducing some of the unplanned downtime, it will, by definition, increase reliability. A reasonable and conservative estimate of the amount of reliability to improve is 20%.&lt;/p&gt;
 
 &lt;p&gt;Applying this benefit on an annual basis would be:&lt;/p&gt;
 
-\[Benefit = 0.2 * \frac{UOH}{8,760}\]
+\[\text{Benefit} = 0.2 \times \frac{\text{UOH}}{8760}\]
 
 &lt;p&gt;This provides an estimated additional hours per year that the plant or asset can produce. If you multiply this by the dollars per hour that the plant makes at full capacity, you have your estimate at what additional revenue APM can bring on an annual basis.&lt;/p&gt;
 
-&lt;p&gt;I also like to take the company’s EBIDTA margin (or whatever margin they typically refer to in their annual report) and translate that revenue into something closer to earnings or profit. It’s a more accurate estimate of customer value than revenue itself.&lt;/p&gt;
+&lt;p&gt;I also like to take the company’s EBITDA margin (or whatever margin they typically refer to in their annual report) and translate that revenue into something closer to earnings or profit. It’s a more accurate estimate of customer value than revenue itself.&lt;/p&gt;
 
 &lt;p&gt;The second method involves stepping through past work orders and classifying a probability of detecting as well as an impact to the detection. This is cumbersome and also a guess. It is possible to do it, but it will typically not improve the fidelity of the value assessment.&lt;/p&gt;
 
 &lt;h2 id=&quot;decreasing-maintenance-cost&quot;&gt;Decreasing maintenance cost&lt;/h2&gt;
+
 &lt;h3 id=&quot;where-the-value-comes-from-1&quot;&gt;Where the value comes from&lt;/h3&gt;
 
 &lt;p&gt;APM also improves a customer’s bottom line by reducing maintenance cost. By moving unplanned maintenance to planned, work is safer, cheaper, and sometimes faster. One anecdote here is that in a combined cycle power plant, a generator rewind costs on the order of $800k for labor/materials, and takes on the order of three weeks to perform. If this generator rewind comes as a surprise, it costs over $2 million dollars and takes about the same amount of time!&lt;/p&gt;
+
 &lt;h3 id=&quot;how-to-estimate-the-value-1&quot;&gt;How to estimate the value&lt;/h3&gt;
 
 &lt;p&gt;By reviewing a customer’s annual reports or investor presentations, you sometimes can infer what their annual maintenance cost is. If the customer is open, try asking them. I have found the customer to be much more open if I come in with an estimated number first.&lt;/p&gt;
@@ -65,12 +66,10 @@
 
 &lt;p&gt;Is this too conservative? Perhaps, but the reality is that APM can generate value that is an order of magnitude more that its cost, the catch is it’s not evenly distributed. The lower a plant’s reliability, the bigger the upside, but also the faster that they will achieve significant value, simply from the frequency of unplanned events occurring.&lt;/p&gt;
 </description>
-        <pubDate>Fri, 11 Jul 2025 13:04:01 -0400</pubDate>
-        <link>http://localhost:4000/articles/25/Value</link>
-        <guid isPermaLink="true">http://localhost:4000/articles/25/Value</guid>
+        <pubDate>Fri, 11 Jul 2025 00:00:00 -0400</pubDate>
+        <link>http://localhost:4001/articles/25/Value</link>
+        <guid isPermaLink="true">http://localhost:4001/articles/25/Value</guid>
         
-        
-        <category>post</category>
         
       </item>
     
@@ -78,38 +77,28 @@
         <title>Software shouldn&apos;t be like Myst</title>
         <description>&lt;p&gt;In the nineties, there was a computer game called Myst.&lt;/p&gt;
 
-&lt;p&gt;The whole premise of the game was you weren’t given clear guidance on the next step to take.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;You’re dropped into a world full of puzzles, false doors, and little traps, trying to solve the game by exploring a mysterious environment.&lt;/p&gt;
+&lt;p&gt;The whole premise of the game was you weren’t given clear guidance on the next step to take. You’re dropped into a world full of puzzles, false doors, and little traps, trying to solve the game by exploring a mysterious environment.&lt;/p&gt;
 
 &lt;p&gt;Unfortunately a tremendous amount of software feels just like this game.&lt;/p&gt;
 
-&lt;p&gt;What if it were easy?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;What if it were easy?&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;How is my plant running?&lt;/p&gt;
-
-&lt;p&gt;How much am I losing in waste?&lt;/p&gt;
-
-&lt;p&gt;Am I getting better, worse, or staying the same?&lt;/p&gt;
+&lt;p&gt;How is my plant running? How much am I losing in waste? Am I getting better, worse, or staying the same?&lt;/p&gt;
 
 &lt;p&gt;Simple questions should have simple answers.&lt;/p&gt;
 
-&lt;p&gt;You get into work, open Chrome and go to your site’s website. It shows you yesterday’s production, what unplanned downtime occurred and and why, and if line speeds were as expected.&lt;/p&gt;
+&lt;p&gt;You get into work, open Chrome and go to your site’s website. It shows you yesterday’s production, what unplanned downtime occurred and why, and if line speeds were as expected.&lt;/p&gt;
 
 &lt;p&gt;In downtime, there was a machine that was acting up. You remember this was happening last week so you look back over the past week at a Pareto chart of downtime to confirm. Sure enough, maintenance has been busy they haven’t gotten to fix it yet. You address this in today’s standup, showing the downtime from the past two weeks and it gets fixed within hours.&lt;/p&gt;
 
 &lt;p&gt;The best part is this information is collected automatically, without people spending their valuable time writing things down or making spreadsheets. It just works. While your team is running the plant, they don’t have to worry about how to collect data while running the plant.&lt;/p&gt;
 
-&lt;p&gt;We can help. Let’s talk at hello@reliability.quest&lt;/p&gt;
+&lt;p&gt;We can help. Let’s talk at &lt;a href=&quot;mailto:hello@reliability.quest&quot;&gt;hello@reliability.quest&lt;/a&gt;.&lt;/p&gt;
 </description>
-        <pubDate>Sun, 13 Apr 2025 13:04:01 -0400</pubDate>
-        <link>http://localhost:4000/articles/25/Myst</link>
-        <guid isPermaLink="true">http://localhost:4000/articles/25/Myst</guid>
+        <pubDate>Sun, 13 Apr 2025 00:00:00 -0400</pubDate>
+        <link>http://localhost:4001/articles/25/Myst</link>
+        <guid isPermaLink="true">http://localhost:4001/articles/25/Myst</guid>
         
-        
-        <category>post</category>
         
       </item>
     
