@@ -3,10 +3,10 @@
   <channel>
     <title>Reliability Quest</title>
     <description>Making asset performance management simple.</description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 16 Feb 2026 18:49:37 -0500</pubDate>
-    <lastBuildDate>Mon, 16 Feb 2026 18:49:37 -0500</lastBuildDate>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 16 Feb 2026 19:06:00 -0500</pubDate>
+    <lastBuildDate>Mon, 16 Feb 2026 19:06:00 -0500</lastBuildDate>
     <generator>Jekyll v4.4.1</generator>
     
       <item>
@@ -67,8 +67,8 @@
 &lt;p&gt;Is this too conservative? Perhaps, but the reality is that APM can generate value that is an order of magnitude more that its cost, the catch is it’s not evenly distributed. The lower a plant’s reliability, the bigger the upside, but also the faster that they will achieve significant value, simply from the frequency of unplanned events occurring.&lt;/p&gt;
 </description>
         <pubDate>Fri, 11 Jul 2025 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/articles/25/Value</link>
-        <guid isPermaLink="true">http://localhost:4000/articles/25/Value</guid>
+        <link>/articles/25/Value</link>
+        <guid isPermaLink="true">/articles/25/Value</guid>
         
         
       </item>
@@ -96,8 +96,8 @@
 &lt;p&gt;We can help. Let’s talk at &lt;a href=&quot;mailto:hello@reliability.quest&quot;&gt;hello@reliability.quest&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Sun, 13 Apr 2025 00:00:00 -0400</pubDate>
-        <link>http://localhost:4000/articles/25/Myst</link>
-        <guid isPermaLink="true">http://localhost:4000/articles/25/Myst</guid>
+        <link>/articles/25/Myst</link>
+        <guid isPermaLink="true">/articles/25/Myst</guid>
         
         
       </item>
