@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ "/apple-touch-icon.png" | prepend: site.baseurl }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ "/favicon-32x32.png" | prepend: site.baseurl }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ "/favicon-16x16.png" | prepend: site.baseurl }}">
+  <link rel="stylesheet" type="text/css" href="{{ "/css/home.css" | prepend: site.baseurl }}">
+</head>
+<body>
+  <header id="header">
+    <a href="{{ site.baseurl }}/" class="logo">{{ site.title }}</a>
+    <div class="toggle-switch" id="themeToggle" role="switch" aria-label="Toggle dark/light mode"></div>
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <script>
+    // Theme toggle
+    const theme = localStorage.getItem('theme') ||
+      (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    document.documentElement.setAttribute('data-theme', theme);
+
+    document.getElementById('themeToggle').addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    });
+
+    // More button
+    const moreBtn = document.getElementById('moreBtn');
+    if (moreBtn) {
+      moreBtn.addEventListener('click', function() {
+        const content = document.getElementById('moreContent');
+        content.classList.toggle('show');
+        this.textContent = content.classList.contains('show') ? 'Less' : 'More';
+      });
+    }
+
+    // Auto-hiding header
+    let lastScroll = 0;
+    let hideTimeout;
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('header');
+      const currentScroll = window.pageYOffset;
+
+      if (currentScroll > lastScroll && currentScroll > 100) {
+        header.classList.add('hidden');
+      } else {
+        header.classList.remove('hidden');
+      }
+      lastScroll = currentScroll;
+
+      clearTimeout(hideTimeout);
+      hideTimeout = setTimeout(() => {
+        header.classList.remove('hidden');
+      }, 2000);
+    }, { passive: true });
+  </script>
+</body>
+</html>

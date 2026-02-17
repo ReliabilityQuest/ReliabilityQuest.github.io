@@ -9,132 +9,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <style>
-    :root {
-      --text: #e8e6e3;
-      --bg: #111;
-      --muted: #888;
-      --border: #333;
-      --link: #6ba3d6;
-    }
-    [data-theme="light"] {
-      --text: #222;
-      --bg: #fefefe;
-      --muted: #666;
-      --border: #ddd;
-      --link: #2563eb;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html {
-      font-size: 18px;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      -moz-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
-    }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      transition: background 0.2s, color 0.2s;
-      font-weight: 400;
-      letter-spacing: -0.01em;
-    }
-    a { color: var(--link); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      padding: 1rem 2rem;
-      background: var(--bg);
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 100;
-      transition: transform 0.3s;
-    }
-    header.hidden { transform: translateY(-100%); }
-    .logo { font-weight: 600; font-size: 1.1rem; color: var(--text); }
-
-    /* Theme toggle switch */
-    .toggle-switch {
-      position: relative;
-      width: 44px;
-      height: 24px;
-      background: var(--border);
-      border-radius: 12px;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    .toggle-switch::after {
-      content: '';
-      position: absolute;
-      top: 2px;
-      left: 2px;
-      width: 20px;
-      height: 20px;
-      background: var(--text);
-      border-radius: 50%;
-      transition: transform 0.2s;
-    }
-    [data-theme="light"] .toggle-switch::after {
-      transform: translateX(20px);
-    }
-
-    main { max-width: 680px; margin: 0 auto; padding: 6rem 1.5rem 4rem; }
-
-    .hero { margin-bottom: 3rem; }
-    .hero h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; letter-spacing: -0.02em; }
-    .hero p { color: var(--muted); font-size: 1.1rem; line-height: 1.7; }
-    .hero .more { display: none; }
-    .hero .more.show { display: block; margin-top: 1rem; }
-    .hero button {
-      background: none;
-      border: none;
-      color: var(--link);
-      cursor: pointer;
-      font-size: 0.95rem;
-      padding: 0;
-      margin-top: 0.5rem;
-    }
-
-    section { margin-bottom: 3rem; }
-    section h2 {
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--muted);
-      margin-bottom: 1rem;
-      font-weight: 500;
-    }
-
-    .item {
-      padding: 0.75rem 0;
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 1rem;
-    }
-    .item:last-child { border-bottom: none; }
-    .item a { font-weight: 500; }
-    .item .date { color: var(--muted); font-size: 0.85rem; white-space: nowrap; }
-
-    .contact { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); }
-    .contact p { color: var(--muted); }
-
-    @media (max-width: 600px) {
-      html { font-size: 16px; }
-      header { padding: 0.75rem 1rem; }
-      .hero h1 { font-size: 2rem; }
-      main { padding-top: 5rem; }
-    }
-  </style>
+  <link rel="stylesheet" type="text/css" href="/css/home.css">
 </head>
 <body>
   <header id="header">
@@ -144,50 +19,51 @@
 
   <main>
     <div class="hero">
-      <h1>Reliability Quest</h1>
-      <p>Making asset performance management simple. Simple questions should have simple answers.</p>
-      <button id="moreBtn">More</button>
-      <div class="more" id="moreContent">
-        <p>Is all this complexity around asset performance management bullshit? Just like you wouldn't schedule a knee replacement at the average age (65), why are we still doing this for equipment maintenance?</p>
-        <p style="margin-top: 0.75rem;">There's a machine and a process. They are and will forever be linked. The most perfect physical model always needs to be calibrated when it's punched in the face by reality.</p>
-      </div>
-    </div>
+  <h1>Reliability Quest</h1>
+  <p>Making asset performance management simple. Simple questions should have simple answers.</p>
+  <button id="moreBtn">More</button>
+  <div class="more" id="moreContent">
+    <p>Is all this complexity around asset performance management bullshit? Just like you wouldn't schedule a knee replacement at the average age (65), why are we still doing this for equipment maintenance?</p>
+    <p style="margin-top: 0.75rem;">There's a machine and a process. They are and will forever be linked. The most perfect physical model always needs to be calibrated when it's punched in the face by reality.</p>
+  </div>
+</div>
 
-    <section id="articles">
-      <h2>Articles</h2>
-      
-      <div class="item">
-        <a href="/articles/25/Value">An inquiry into value</a>
-        <span class="date">Jul 2025</span>
-      </div>
-      
-      <div class="item">
-        <a href="/articles/25/Myst">Software shouldn't be like Myst</a>
-        <span class="date">Apr 2025</span>
-      </div>
-      
-    </section>
+<section id="articles">
+  <h2>Articles</h2>
+  
+  <div class="item">
+    <a href="/articles/25/Value">An inquiry into value</a>
+    <span class="date">Jul 2025</span>
+  </div>
+  
+  <div class="item">
+    <a href="/articles/25/Myst">Software shouldn't be like Myst</a>
+    <span class="date">Apr 2025</span>
+  </div>
+  
+</section>
 
-    <section id="about">
-      <h2>About</h2>
-      <p style="color: var(--muted); line-height: 1.7;">You have a maintenance strategy whether you say it or not. <a href="https://www.youtube.com/watch?v=urBpdyFCZmo">If you choose not to decide you still have made a choice</a>. Much like a doctor, you shouldn't add another measurement unless you can explain how it's going to change your asset strategy. Is it complicated, sure. Complex? No.</p>
-    </section>
+<section id="about">
+  <h2>About</h2>
+  <p style="color: var(--muted); line-height: 1.7;">You have a maintenance strategy whether you say it or not. <a href="https://www.youtube.com/watch?v=urBpdyFCZmo">If you choose not to decide you still have made a choice</a>. Much like a doctor, you shouldn't add another measurement unless you can explain how it's going to change your asset strategy. Is it complicated, sure. Complex? No.</p>
+</section>
 
-    <section id="lab">
-      <h2>Lab</h2>
-      <div class="item">
-        <a href="https://www.justcast.com/shows/05554e06be7642a6f4acd5fa420f56a6081dc1a8/audioposts">Podcast</a>
-        <span class="date">Asset Performance</span>
-      </div>
-      <div class="item">
-        <a href="https://chatapm.com">ChatAPM</a>
-        <span class="date">An online APM expert</span>
-      </div>
-    </section>
+<section id="lab">
+  <h2>Lab</h2>
+  <div class="item">
+    <a href="https://www.justcast.com/shows/05554e06be7642a6f4acd5fa420f56a6081dc1a8/audioposts">Podcast</a>
+    <span class="date">Asset Performance</span>
+  </div>
+  <div class="item">
+    <a href="https://chatapm.com">ChatAPM</a>
+    <span class="date">An online APM expert</span>
+  </div>
+</section>
 
-    <div class="contact">
-      <p>Get in touch: <a href="mailto:hello@reliability.quest">hello@reliability.quest</a></p>
-    </div>
+<div class="contact">
+  <p>Get in touch: <a href="mailto:hello@reliability.quest">hello@reliability.quest</a></p>
+</div>
+
   </main>
 
   <script>
@@ -204,11 +80,14 @@
     });
 
     // More button
-    document.getElementById('moreBtn').addEventListener('click', function() {
-      const content = document.getElementById('moreContent');
-      content.classList.toggle('show');
-      this.textContent = content.classList.contains('show') ? 'Less' : 'More';
-    });
+    const moreBtn = document.getElementById('moreBtn');
+    if (moreBtn) {
+      moreBtn.addEventListener('click', function() {
+        const content = document.getElementById('moreContent');
+        content.classList.toggle('show');
+        this.textContent = content.classList.contains('show') ? 'Less' : 'More';
+      });
+    }
 
     // Auto-hiding header
     let lastScroll = 0;
